@@ -14,15 +14,17 @@ class Ball {
   }
 }
 
-Ball[] balls = new Ball[2];
+Ball[] balls = new Ball[10];
 
 void setup() {
   size(400,400);
-  balls[0] = new Ball(100,100,80);
-  balls[1] = new Ball(300,300,80);
+  for (int i = 0; i < 10; i++) {
+    balls[i] = new Ball(30*i,30*i,20*i);
+  }
 }
 
 void draw() {
-  balls[0].draw();
-  balls[1].draw();
+  for (int i = 0; i < 10; i++) {
+    balls[i].draw();
+  }
 }
